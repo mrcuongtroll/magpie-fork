@@ -15,7 +15,7 @@ batch_size=200
 timestamp=$(date +%s)
 
 # Generate Pretty Name
-job_name="${model_path##*/}_topp${ins_topp}_temp${ins_temp}_${timestamp}"
+job_name="${model_path##*/}_topp${ins_topp}_temp${ins_temp}_qwentemplate_${timestamp}"
 
 ### Setup Logging
 log_dir="data"
