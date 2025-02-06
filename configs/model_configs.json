@@ -347,9 +347,9 @@
   "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B": {
     "model_name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
     "stop_tokens": [
-      "<｜User｜>",
-      "<｜Assistant｜>",
-      "<｜end▁of▁sentence｜>"
+      "<|im_start|>",
+      "<|im_end|>",
+      "<|endoftext|>"
     ],
     "stop_token_ids": [
       151643,
@@ -360,14 +360,14 @@
       "Assistant",
       "assistant"
     ],
-    "pre_query_template": "<｜begin▁of▁sentence｜>You are DeepSeek-R1, an artificial intelligence assistant created by DeepSeek. You are a helpful assistant.<｜User｜>"
+    "pre_query_template": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n"
   },
   "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B": {
     "model_name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
     "stop_tokens": [
-      "<｜User｜>",
-      "<｜Assistant｜>",
-      "<｜end▁of▁sentence｜>"
+      "<|im_start|>",
+      "<|im_end|>",
+      "<|endoftext|>"
     ],
     "stop_token_ids": [
       151643,
@@ -378,7 +378,7 @@
       "Assistant",
       "assistant"
     ],
-    "pre_query_template": "<｜begin▁of▁sentence｜>You are DeepSeek-R1, an artificial intelligence assistant created by DeepSeek. You are a helpful assistant.<｜User｜>"
+    "pre_query_template": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n"
   },
   "Qwen/Qwen2.5-Coder-32B-Instruct": {
     "model_name": "Qwen/Qwen2.5-Coder-32B-Instruct",
