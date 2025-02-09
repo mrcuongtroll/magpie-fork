@@ -1,10 +1,10 @@
 input_file=${1:-"none"}
 tag_mission=${2:-"all"}
-device=${3:-"0"}
+device=${3:-"0,1,2,3,4,5,6,7"}
 model_path=${4:-"meta-llama/Meta-Llama-3-8B-Instruct"}
 guard_model_path="meta-llama/Meta-Llama-Guard-2-8B"
 reward_model_path="sfairXC/FsfairX-LLaMA3-RM-v0.1"
-tensor_parallel=1
+tensor_parallel=8
 gpu_memory_utilization=0.95
 batch_size=1000
 
