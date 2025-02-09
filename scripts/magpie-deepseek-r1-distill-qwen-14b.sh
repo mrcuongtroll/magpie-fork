@@ -1,9 +1,9 @@
 model_path=${1:-"deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"}
 total_prompts=${2:-1000000}
 ins_topp=${3:-1}
-ins_temp=${4:-1}
+ins_temp=${4:-0.6}
 res_topp=${5:-1}
-res_temp=${6:-0}
+res_temp=${6:-0.6}
 res_rep=1
 device="0,1,2,3,4,5,6,7"
 tensor_parallel=8
