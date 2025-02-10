@@ -1,7 +1,7 @@
 model_path=${1:-"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"}
 total_prompts=${2:-1000000}
 ins_topp=${3:-1}
-ins_temp=${4:-0.6}
+ins_temp=${4:-1}
 res_topp=${5:-1}
 res_temp=${6:-0.6}
 res_rep=1
