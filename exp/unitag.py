@@ -301,7 +301,8 @@ if __name__ == "__main__":
                 rm_pipe = pipeline(
                     "sentiment-analysis",
                     model=args.reward_model_path,
-                    device=int(args.device),
+                    device_map="auto",
+                    # device=int(args.device),
                     tokenizer=rm_tokenizer,
                     model_kwargs={"torch_dtype": torch.float16}
                 )
