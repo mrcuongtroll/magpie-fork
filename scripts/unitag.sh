@@ -28,14 +28,14 @@ echo "[magpie.sh] System Config: device=$device, batch_size=$batch_size, tensor_
 
 if [ $tag_mission == "difficulty" ] || [ $tag_mission == "all" ]; then
     echo "[magpie.sh] Start Generating Difficulty Tags..."
-    CUDA_VISIBLE_DEVICES=$device python ../exp/unitag.py \
-        --device $device \
-        --model_path $model_path \
-        --input_file $input_file \
-        --tag_mission "difficulty" \
-        --tensor_parallel $tensor_parallel \
-        --gpu_memory_utilization $gpu_memory_utilization \
-        --batch_size $batch_size \
+#    CUDA_VISIBLE_DEVICES=$device python ../exp/unitag.py \
+#        --device $device \
+#        --model_path $model_path \
+#        --input_file $input_file \
+#        --tag_mission "difficulty" \
+#        --tensor_parallel $tensor_parallel \
+#        --gpu_memory_utilization $gpu_memory_utilization \
+#        --batch_size $batch_size \
 
     echo "[magpie.sh] Finish Generating Difficulty Tags!"
 
