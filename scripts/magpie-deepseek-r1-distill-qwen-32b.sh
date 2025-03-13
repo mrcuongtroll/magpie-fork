@@ -12,8 +12,8 @@ n=200
 batch_size=200
 
 # Get Current Time
-#timestamp=$(date +%s)
-timestamp=1739168098
+timestamp=$(date +%s)
+#timestamp=1739168098
 
 # Generate Pretty Name
 job_name="${model_path##*/}_topp${ins_topp}_temp${ins_temp}_${timestamp}"
@@ -37,20 +37,20 @@ echo "[magpie.sh] System Config: device=$device, n=$n, batch_size=$batch_size, t
 echo "[magpie.sh] Timestamp: $timestamp"
 echo "[magpie.sh] Job Name: $job_name"
 
-#echo "[magpie.sh] Start Generating Instructions..."
-#CUDA_VISIBLE_DEVICES=$device python ../exp/gen_ins.py \
-#    --device $device \
-#    --model_path $model_path \
-#    --total_prompts $total_prompts \
-#    --top_p $ins_topp \
-#    --temperature $ins_temp \
-#    --tensor_parallel $tensor_parallel \
-#    --gpu_memory_utilization $gpu_memory_utilization \
-#    --n $n \
-#    --job_name $job_name \
-#    --timestamp $timestamp
-#
-#echo "[magpie.sh] Finish Generating Instructions!"
+echo "[magpie.sh] Start Generating Instructions..."
+CUDA_VISIBLE_DEVICES=$device python ../exp/gen_ins.py \
+    --device $device \
+    --model_path $model_path \
+    --total_prompts $total_prompts \
+    --top_p $ins_topp \
+    --temperature $ins_temp \
+    --tensor_parallel $tensor_parallel \
+    --gpu_memory_utilization $gpu_memory_utilization \
+    --n $n \
+    --job_name $job_name \
+    --timestamp $timestamp
+
+echo "[magpie.sh] Finish Generating Instructions!"
 
 echo "[magpie.sh] Start Generating Responses..."
 CUDA_VISIBLE_DEVICES=$device python ../exp/gen_res.py \
