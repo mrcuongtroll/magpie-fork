@@ -64,7 +64,7 @@ CUDA_VISIBLE_DEVICES=$device python ../exp/gen_res.py \
     --input_file $job_path/Magpie_${model_path##*/}_${total_prompts}_${timestamp}_ins.json \
     --offline \
     --use_tokenizer_template \
-    --max_tokens=131072 \
+    --max_tokens=128000 \
     --max_model_len=131072
 
 echo "[magpie.sh] Finish Generating Responses!"
