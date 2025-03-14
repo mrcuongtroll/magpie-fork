@@ -47,7 +47,8 @@ CUDA_VISIBLE_DEVICES=$device python ../exp/gen_ins.py \
     --gpu_memory_utilization $gpu_memory_utilization \
     --n $n \
     --job_name $job_name \
-    --timestamp $timestamp
+    --timestamp $timestamp \
+    --max_model_len=131072
 
 echo "[magpie.sh] Finish Generating Instructions!"
 
